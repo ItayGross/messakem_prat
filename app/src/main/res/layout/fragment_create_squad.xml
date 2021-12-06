@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/fragment_create_squad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_soldier_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/img_btn_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/black_rounded_border"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_create_squad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_check_24" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/black_rounded_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6">
+
+            <EditText
+                android:id="@+id/et_squad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/tv_pluga"
+                android:gravity="right"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:maxHeight="65dp"
+                android:minWidth="50dp"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_pluga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="פלוגה"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/black_rounded_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.375">
+
+            <EditText
+                android:id="@+id/et_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/tv_gdud"
+                android:gravity="right"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_gdud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="גדוד"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/black_rounded_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15">
+
+            <TextView
+                android:id="@+id/tv_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/spinner_month"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/spinner_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/tv_date"
+                android:background="@android:color/transparent"
+                android:entries="@array/months"
+                android:gravity="center" />
+
+            <Spinner
+                android:id="@+id/spinner_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_slash"
+                android:background="@android:color/transparent"
+                android:entries="@array/days"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="תאריך"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

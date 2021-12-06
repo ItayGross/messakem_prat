@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/squadListFragment">
+
+    <fragment
+        android:id="@+id/squadListFragment"
+        android:name="com.example.messakem_prat.ui.fragments.SquadListFragment"
+        android:label="SquadListFragment" >
+        <action
+            android:id="@+id/action_squadListFragment_to_createSquadFragment"
+            app:destination="@id/createSquadFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSquadFragment"
+        android:name="com.example.messakem_prat.ui.fragments.CreateSquadFragment"
+        android:label="CreateSquadFragment" >
+        <action
+            android:id="@+id/action_createSquadFragment_to_squadListFragment"
+            app:destination="@id/squadListFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+</navigation>
